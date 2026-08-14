@@ -1,158 +1,195 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="العهد القضائي — بوابة العدل والقضاء">
-<title>العهد القضائي | مجلس العدل والقضاء</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>القضاء والعدل | جمهورية سيلفر</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="noise"></div>
-
-<header class="topbar">
-  <a class="brand" href="#home"><span class="brand-mark">⚖</span><span><b>العهد القضائي</b><small>مجلس العدل والقضاء</small></span></a>
-  <nav>
-    <a href="#about">عن المجلس</a><a href="#cases">القضايا</a><a href="#laws">الأنظمة</a>
-    <a href="#staff">الكوادر</a><a href="#decisions">القرارات</a>
-  </nav>
-  <button class="login" onclick="openLogin()">دخول الأعضاء</button>
-</header>
-
-<main id="home">
-<section class="hero">
-  <div class="hero-copy reveal">
-    <div class="eyebrow">سجل رسمي · محمي · موثّق</div>
-    <h1>العدل<br><em>أساس الحكم.</em></h1>
-    <p>البوابة الرسمية لأرشيف العدل والقضاء، وسجل القضايا والأحكام والأنظمة والكوادر القضائية والقانونية.</p>
-    <div class="actions"><a class="primary" href="#cases">السجل القضائي <span>←</span></a><a class="ghost" href="#about">عن المجلس</a></div>
-  </div>
-  <div class="seal reveal"><div class="seal-ring"><div class="seal-inner"><span>⚖</span><strong>مجلس<br>العدل</strong><small>JUSTICE · EST. 2026</small></div></div></div>
-  <div class="archive-note">سجل رقم 001<br><b>الإصدار الأول</b><br>محفوظ في أرشيف المجلس</div>
-</section>
-
-<section class="manifesto" id="about">
-  <div class="section-label">01 — الميثاق</div>
-  <div><h2>نحفظ الحق،<br><span>ونصون العدالة.</span></h2><p>منظومة قضائية تهدف إلى تنظيم أعمال القضاء وتوثيق القضايا والقرارات والأنظمة، مع الحفاظ على هيبة القانون ووضوح الإجراءات.</p></div>
-</section>
-
-<section class="cases" id="cases">
-  <div class="section-label">02 — السجل القضائي</div>
-  <div class="section-title-row"><h2>القضايا التي مرّت</h2><span class="counter">02 قضية مؤرشفة</span></div>
-
-  <article class="case-card featured">
-    <div class="case-number">القضية رقم 02</div>
-    <h3>قضية العم جدو ورجال القانون</h3>
-    <div class="case-meta"><span>المدعي/المتضرر: العم جدو</span><span>شهادات: اللمبي · جاك هاربر · يويو ال منذر</span></div>
-    <p>نزاع بدأ أمام محل الملابس وتطور إلى تقييد واشتباك وإطلاق نار، مع إفادات متعددة من أطراف وشهود القضية.</p>
-    <button class="dark-btn" onclick="openCase('case2')">فتح ملف القضية →</button>
-  </article>
-
-  <article class="case-card">
-    <div class="case-number">القضية رقم 01</div>
-    <h3>قضية بجاد ستارك</h3>
-    <div class="case-meta"><span>قرار القضية: إلغاء الملف</span><span>نوع القرار: قرار قضائي</span></div>
-    <p>تم إلغاء ملف القضية المرفوعة على رئيس الجمهورية.</p>
-    <button class="outline" onclick="openCase('case1')">فتح القرار →</button>
-  </article>
-</section>
-
-<section class="laws" id="laws">
-  <div class="section-head"><div class="section-label">03 — الأنظمة واللوائح</div><h2>قوانين القاضي<br>وحقوق المحامي</h2></div>
-  <div class="law-grid">
-    <article class="law-card"><span>01</span><h3>صلاحيات وواجبات القاضي</h3><ul>
-      <li><b>الحياد التام:</b> يمنع القاضي من الانحياز لأي طرف، ويبنى الحكم على الأدلة والبراهين.</li>
-      <li><b>مذكرات التوقيف والتفتيش:</b> لا يحق اقتحام المقرات الكبرى أو تفتيش الحسابات البنكية إلا بمذكرة رسمية موقعة ومسببة من القاضي.</li>
-      <li><b>إدارة القاعة:</b> للقاضي طرد مسبب الفوضى وفرض الغرامات الفورية بتهمة إهانة المحكمة.</li>
-    </ul></article>
-    <article class="law-card"><span>02</span><h3>محظورات القاضي</h3><ul>
-      <li><b>يمنع الفساد:</b> يمنع قبول الرشاوى مالياً أو عينياً لتخفيف الأحكام.</li>
-      <li><b>العلاقات الشخصية:</b> على القاضي التنحي عند وجود صلة قرابة أو صداقة قوية مع المتهم أو الضحية.</li>
-      <li><b>أسرار التحقيق:</b> يمنع تسريب الأدلة أو مذكرات التفتيش قبل تنفيذها.</li>
-    </ul><div class="penalty">عقوبة المخالفة: سحب الرتبة</div></article>
-    <article class="law-card"><span>03</span><h3>حقوق المحامي</h3><ul>
-      <li>حق الوصول للموقوف بمجرد طلب المتهم لمحامٍ، مع فرصة للانفراد بموكله من 5 إلى 10 دقائق.</li>
-      <li>حق حضور التحقيقات ونصح الموكل بالصمت عند الحاجة.</li>
-      <li>حق معاينة الأدلة التي تمتلكها الشرطة قبل بدء المحاكمة.</li>
-    </ul></article>
-    <article class="law-card"><span>04</span><h3>محظورات المحامي</h3><ul>
-      <li><b>تهريب الممنوعات:</b> يمنع استغلال الحصانة لتهريب الأسلحة أو أدوات فك القيود للمتهم داخل السجن.</li>
-      <li><b>التواطؤ مع الشرطة:</b> يمنع بيع القضية أو التواطؤ ضد مصلحة الموكل.</li>
-      <li><b>الأتعاب:</b> يجب الاتفاق عليها مسبقاً، ويمنع تجاوز الحد الأعلى المحدد من وزارة العدل.</li>
-    </ul></article>
-  </div>
-
-  <div class="law-full">
-    <div class="section-label">04 — سلوكيات المحامي داخل القاعة</div>
-    <h2>قواعد الحضور<br>والمرافعة</h2>
-    <div class="behavior-grid">
-      <div><b>وقفة الثقة</b><p>يتقدم المحامي نحو منصة الدفاع، يضع حقيبته على الطاولة، ويقول: «سيدي القاضي، أثبت حضوري عن الموكل...»</p></div>
-      <div><b>الاعتراض المفاجئ</b><p>يرفع يده بثبات قائلاً: «اعتراض يا سيادة القاضي!» مع توضيح السبب.</p></div>
-      <div><b>المواجهة بالدليل</b><p>إظهار ورقة أو دليل من الملف وكشف تناقض الأقوال أمام منصة الشهود.</p></div>
-      <div><b>طلب التدوين</b><p>طلب إثبات التناقضات الصريحة في محضر ضبط الجلسة فوراً.</p></div>
+  <aside class="sidebar">
+    <div class="brand">
+      <img src="logo.png" alt="شعار القضاء والعدل">
+      <h2>القضاء والعدل</h2>
+      <span>جمهورية سيلفر</span>
     </div>
-    <div class="grounds"><h3>الأسانيد التي يعتمد عليها المحامي</h3><span>دليل المفاجأة</span><span>ثغرة الإجراءات</span><span>ضرب مصداقية الشاهد</span><span>الحجة المنطقية القاطعة</span></div>
-  </div>
-</section>
+    <nav>
+      <a class="active" href="#home">⌂ الرئيسية</a>
+      <a href="#cases">⚖ سجل القضايا</a>
+      <a href="#laws">▤ القوانين واللوائح</a>
+      <a href="#investigators">⌕ المحققين</a>
+      <a href="#lawyers">♙ المحامين</a>
+      <a href="#decisions">▣ القرارات القديمة</a>
+      <a href="#judiciary">♜ هيئة القضاء</a>
+      <a href="#login">✉ تسجيل الدخول</a>
+    </nav>
+    <div class="quote">«العدل أساس الملك، والقضاء سلطان لا يُسأل عما يفعل»</div>
+  </aside>
 
-<section class="staff" id="staff">
-  <div class="section-label">05 — الكوادر</div>
-  <h2>رجال القانون<br>والمحققون والقضاة</h2>
-  <div class="staff-grid">
-    <div class="staff-group"><h3>المحققون المتوفرون</h3>
-      <div class="person">يايا ال منذر</div><div class="person">الحانوتي</div><div class="person">عنترة ال ستارك</div><div class="person">الحارث بن عبيدة ال ستارك</div><div class="person">ابا النواس ال ستارك</div><div class="person">ابا القعقاع الوتار <small>رئيس قسم المحققين</small></div><div class="person">دريد الوتار <small>كاتب المحكمة · مساعد رئيس قسم المحققين</small></div>
+  <main>
+    <header>
+      <div class="header-logo">
+        <img src="logo.png" alt="الشعار">
+        <div>
+          <h1>القضاء والعدل</h1>
+          <p>جمهورية سيلفر</p>
+        </div>
+      </div>
+      <button class="login-btn" onclick="showLogin()">تسجيل الدخول</button>
+    </header>
+
+    <section id="home" class="hero">
+      <div>
+        <span class="eyebrow">منصة القضاء الرسمية</span>
+        <h2>العدالة فوق الجميع</h2>
+        <p>نحن هنا لتحقيق العدل، وحماية الحقوق، وتطبيق القانون على الجميع دون استثناء.</p>
+        <a class="gold-btn" href="#cases">الاطلاع على القضايا</a>
+      </div>
+      <div class="scales">⚖</div>
+    </section>
+
+    <section id="cases" class="section">
+      <div class="section-title"><span>⚖</span><h2>سجل القضايا السابقة</h2></div>
+      <p class="hint">يمكن للجميع مشاهدة بيانات القضية الأساسية، بينما تتطلب تفاصيل الملف تسجيل الدخول.</p>
+
+      <div class="cases-grid">
+        <article class="case-card">
+          <div class="case-no">01</div>
+          <span class="badge closed">مغلقة</span>
+          <h3>قضية بجاد ستارك</h3>
+          <p>يتم إلغاء ملف القضية المرفوعة على رئيس الجمهورية.</p>
+          <button onclick="openCase(1)">عرض تفاصيل القضية</button>
+        </article>
+
+        <article class="case-card">
+          <div class="case-no">02</div>
+          <span class="badge open">مفتوحة</span>
+          <h3>قضية العم جدو ورجال القانون</h3>
+          <p>وقائع اعتداء وإطلاق نار وبلاغات متبادلة بين الأطراف.</p>
+          <button onclick="openCase(2)">عرض تفاصيل القضية</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><b>2</b><span>القضايا المسجلة</span></div>
+      <div><b>1</b><span>قضايا مفتوحة</span></div>
+      <div><b>1</b><span>قضايا مغلقة</span></div>
+      <div><b>3</b><span>محامين متاحين</span></div>
+    </section>
+
+    <section id="laws" class="section">
+      <div class="section-title"><span>▤</span><h2>قوانين القاضي والمحامي</h2></div>
+      <div class="law-grid">
+        <div class="panel">
+          <h3>صلاحيات وواجبات القاضي</h3>
+          <ul>
+            <li>الحياد التام وبناء الحكم على الأدلة والبراهين.</li>
+            <li>إصدار مذكرات التوقيف والتفتيش الرسمية والمسببة.</li>
+            <li>إدارة قاعة المحكمة وطرد مثيري الفوضى وفرض الغرامات.</li>
+          </ul>
+          <h3>محظورات القاضي</h3>
+          <ul>
+            <li>يمنع قبول الرشاوى.</li>
+            <li>التنحي عند وجود صلة قوية بأحد أطراف القضية.</li>
+            <li>يمنع إفشاء أسرار التحقيق قبل تنفيذها.</li>
+          </ul>
+          <div class="penalty">عقوبة المخالفة: سحب الرتبة</div>
+        </div>
+
+        <div class="panel">
+          <h3>حقوق المحامي</h3>
+          <ul>
+            <li>حق الوصول للموقوف والانفراد بموكله لمدة 5 إلى 10 دقائق.</li>
+            <li>حضور التحقيقات ونصح الموكل بالصمت عند الحاجة.</li>
+            <li>معاينة الأدلة قبل بدء المحاكمة.</li>
+          </ul>
+          <h3>محظورات المحامي</h3>
+          <ul>
+            <li>يمنع تهريب الممنوعات مستغلاً الحصانة.</li>
+            <li>يمنع التواطؤ مع الشرطة ضد مصلحة الموكل.</li>
+            <li>الاتفاق على الأتعاب مسبقاً وعدم تجاوز الحد الأعلى.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="panel wide">
+        <h3>سلوكيات المحامي داخل القاعة</h3>
+        <ul>
+          <li>مخاطبة القاضي بلقب «سيادة القاضي» أو «حضرة القاضي» وعدم المقاطعة.</li>
+          <li>الاعتراض بعبارة «اعتراض يا سيادة القاضي!» مع ذكر السبب.</li>
+          <li>استخدام الأدلة لكشف التناقضات وطلب تدوينها في محضر الجلسة.</li>
+          <li>الاستناد إلى دليل المفاجأة وثغرات الإجراءات ومصداقية الشاهد والحجة المنطقية.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="investigators" class="section">
+      <div class="section-title"><span>⌕</span><h2>المحققين المتوفرين</h2></div>
+      <div class="people-grid">
+        <div class="person">يايا ال منذر</div><div class="person">الحانوتي</div>
+        <div class="person">عنترة ال ستارك</div><div class="person">الحارث بن عبيدة ال ستارك</div>
+        <div class="person">ابا النواس ال ستارك</div><div class="person chief">ابا القعقاع الوتار <small>رئيس قسم المحققين</small></div>
+        <div class="person chief">دريد الوتار <small>كاتب المحكمة ومساعد رئيس قسم المحققين</small></div>
+      </div>
+    </section>
+
+    <section id="lawyers" class="section">
+      <div class="section-title"><span>♙</span><h2>المحامين المتوفرين</h2></div>
+      <div class="people-grid three">
+        <div class="person">المعتمد ابن عباد</div>
+        <div class="person">جعفر الجعافر</div>
+        <div class="person">كريقان ستارك</div>
+      </div>
+    </section>
+
+    <section id="judiciary" class="section">
+      <div class="section-title"><span>♜</span><h2>هيئة القضاء</h2></div>
+      <div class="judges">
+        <div><strong>كبير القضاة</strong><span>العجوز مرداس ال ضرغام</span></div>
+        <div><strong>نائب كبير القضاة</strong><span>ابا سيف</span></div>
+        <div><strong>مستشار كبير القضاة</strong><span>سراب ال ضرغام</span></div>
+      </div>
+    </section>
+
+    <section id="decisions" class="section">
+      <div class="section-title"><span>▣</span><h2>القرارات القديمة</h2></div>
+      <div class="decision">
+        <h3>إعلان للمواطنين — تنظيم أتعاب المحامين</h3>
+        <p>تعلن المحكمة عن اعتماد تنظيم جديد لأتعاب المحامين، حيث لا يحق للمحامي التنازل عن أتعابه المستحقة، ويتم استقطاع نسبة 20٪ من إجمالي الأتعاب لصالح المحكمة. وتتراوح أتعاب المحامي بين 30,000 كحد أدنى و45,000 كحد أقصى، بهدف تنظيم الأتعاب والمساهمة في تنظيم ميزانية القطاع ودعم ميزانية الدولة.</p>
+      </div>
+      <div class="decision">
+        <h3>حكم محكمة</h3>
+        <p>تقرر المحكمة إيقاف صرف رواتب جميع موظفي الدولة حتى إشعار آخر بسبب التباطؤ في أداء الواجبات وعدم الالتزام بالعمل واستغلال نفوذ المناصب والإخلال بالمسؤوليات. كما تقرر إيقاف صلاحيات الجنرال العام ونائبه ومستشاره لضعف الأداء وسوء إدارة المهام، وفصل رجل القانون شجاع من منصبه بسبب عدم الالتزام والإساءة للمحكمة، مع التأكيد أن القانون فوق الجميع.</p>
+        <footer>كبير القضاة بالإنابة: العجوز مرداس آل ضرغام</footer>
+      </div>
+    </section>
+
+    <section id="login" class="login-section">
+      <h2>دخول موظفي القضاء</h2>
+      <p>أدخل رمز الدخول لعرض تفاصيل ملفات القضايا.</p>
+      <div class="login-box">
+        <input id="codeInput" type="password" placeholder="رمز الدخول">
+        <button onclick="login()">دخول</button>
+      </div>
+      <small>الزائر غير المسجل يستطيع مشاهدة بيانات القضية الأساسية فقط.</small>
+    </section>
+
+    <footer class="site-footer">© القضاء والعدل — جمهورية سيلفر</footer>
+  </main>
+
+  <div id="loginModal" class="modal">
+    <div class="modal-box">
+      <button class="close" onclick="closeLogin()">×</button>
+      <img src="logo.png" alt="الشعار">
+      <h2>تسجيل الدخول</h2>
+      <p>أدخل رمز الدخول للوصول إلى تفاصيل القضايا.</p>
+      <input id="modalCode" type="password" placeholder="رمز الدخول">
+      <button class="gold-btn full" onclick="loginFromModal()">دخول</button>
+      <div id="loginError"></div>
     </div>
-    <div class="staff-group"><h3>المحامون المتوفرون</h3>
-      <div class="person">المعتمد ابن عباد</div><div class="person">جعفر الجعافر</div><div class="person">كريقان ستارك</div>
-    </div>
-    <div class="staff-group judges"><h3>هيئة القضاء</h3>
-      <div class="person">العجوز مرداس ال ضرغام <small>كبير القضاة</small></div>
-      <div class="person">ابا سيف <small>نائب كبير القضاة</small></div>
-      <div class="person">سراب ال ضرغام <small>مستشار كبير القضاة</small></div>
-    </div>
   </div>
-</section>
 
-<section class="decisions" id="decisions">
-  <div class="section-label">06 — أرشيف القرارات القديمة</div>
-  <h2>قرارات نافذة<br>في سجل المحكمة</h2>
-  <div class="decision">
-    <span>قرار تنظيمي</span><h3>تنظيم جديد لأتعاب المحامين</h3>
-    <p>تعلن المحكمة اعتماد تنظيم جديد لأتعاب المحامين، حيث لا يحق للمحامي التنازل عن أتعابه المستحقة، ويتم استقطاع نسبة <b>20٪</b> من إجمالي الأتعاب لصالح المحكمة.</p>
-    <p>تتراوح أتعاب المحامي بين <b>30,000</b> كحد أدنى و<b>45,000</b> كحد أقصى، ويأتي القرار لتنظيم الأتعاب والمساهمة في تنظيم ميزانية القطاع ودعم ميزانية الدولة وتوفير خدمات قانونية.</p>
-  </div>
-  <div class="decision dark">
-    <span>حكم محكمة</span><h3>إيقاف صرف الرواتب والصلاحيات</h3>
-    <p>تقرر المحكمة إيقاف صرف رواتب جميع موظفي الدولة حتى إشعار آخر بسبب التباطؤ في أداء الواجبات وعدم الالتزام بالعمل واستغلال نفوذ المناصب والإخلال بالمسؤوليات الموكلة إليهم.</p>
-    <p>كما تقرر المحكمة إيقاف صلاحيات الجنرال العام ونائبه ومستشاره لضعف الأداء وسوء إدارة المهام وتعطيل مصالح المواطنين، ويستمر الحكم حتى رفع المذكرة إلى رئيس الجمهورية للنظر فيها.</p>
-    <p>وتقرر المحكمة فصل رجل القانون شجاع من منصبه بسبب عدم الالتزام والإساءة للمحكمة وصدور تصرفات تمس هيبة القضاء.</p>
-    <p>وتؤكد المحكمة أن القانون فوق الجميع وأن من يخالفه يتحمل كامل المسؤولية.</p>
-    <footer class="decision-sign">كبير القضاة بالإنابة — القاضي: العجوز مرداس آل ضرغام</footer>
-  </div>
-</section>
-
-<section class="testimony">
-  <div class="section-label">07 — إفادات القضية رقم 02</div>
-  <h2>محاضر الشهود<br>والأطراف</h2>
-  <div class="testimony-grid">
-    <button onclick="openWitness('العم جدو', `كنا أنا واللمبي أمام محل الملابس. قلت لرجال القانون ابتعدوا عن هذا المكان، وقالوا لي هذا المكان آمن ولا يجب عليك قول هذا، ثم دفعني ودفعته وربطني ووضعني على الأرض. حينها فك قيدي عندما رأى رجالي يريدون التدخل. ثم أتى اليخاندرو، وكبر الشجار وأطلق النار على ذراعي. طلبت منه عدم فعل ذلك وقلت له: اذهب أطلق علي. وذهب بي اللمبي إلى المستشفى.`)">العم جدو <small>إفادة الطرف الأول</small></button>
-    <button onclick="openWitness('اللمبي', `كنت مع العم جدو في محل الملابس. هو خرج من اليمين وأنا خرجت من الشمال. كنت أريد أن أجلب حصاني وأخذته ومشيت إلى الجهة التي خرج منها العم جدو. عندما وصلت رأيت العم جدو مربوطاً من رجال القانون، فمشيت وفككت الحبل. ورأيت رجل قانون يربط لوفي وكانت يايا معي. التفت ورأيت إطلاق نار وركضت، ثم رأيت العم جدو مصاباً وأخذته إلى المستشفى. وكان جاك مصاباً أيضاً، والذي أطلق على العم جدو هو اليخاندرو.`)">اللمبي <small>إفادة شاهد</small></button>
-    <button onclick="openWitness('جاك هاربر', `بعد ما تم استدعائي منك، كنت تريد أن أحمي المحكمة. ذهبنا إلى محل الملابس ووجدنا العم جدو يقول: لا تجلسوا هنا وماذا أتى بكم هنا. عندما قمت بربطه، وأنا رجل قانون، قلت له لا تكلمني بهذا الكلام مرة أخرى، وفكيت قيده. أتى ودفني ثم ضرب اليخاندرو. ثم قمت بتربيط العم جدو وقمت بتربيط لوفي وذهبت به إلى السجن. أتى شخص من الروتشيلد وقام بإطلاق النار علي أنا واليخاندرو.`)">جاك هاربر <small>إفادة رجل قانون</small></button>
-    <button onclick="openWitness('الجنرال سيف', `إذا كان هذا الاعتداء الذي فعلوه مثل ما قال صاحبنا المارشال جاك المنذر، ربما سوف أقسى عليهم قليلاً، ولا أريد أن أبدأ عهدي في القساوة، وسوف أوكل الأمر إليك.`)">الجنرال سيف <small>إفادة</small></button>
-    <button onclick="openWitness('اللمبي — أمام المحكمة', `قال لجاك هاربر: كلب الجنرال.`)">اللمبي — واقعة المحكمة <small>محضر</small></button>
-    <button onclick="openWitness('يويو ال منذر', `كان موجود العم جدو وهجم على جاك فقط، هذا ما رأيته. وكان معي والي الدار.`)">يويو ال منذر <small>إفادة شاهد</small></button>
-  </div>
-</section>
-
-<section class="login-banner"><div><span class="lock">⌁</span><div><small>دخول مقيّد</small><h2>السجل الكامل لا يُفتح إلا للمخوّلين.</h2></div></div><button class="primary" onclick="openLogin()">تسجيل الدخول</button></section>
-</main>
-
-<footer><div><b>⚖ العهد القضائي</b><span>مجلس العدل والقضاء</span></div><span>جميع السجلات محمية · الإصدار 1.0</span></footer>
-
-<div class="modal" id="modal"><div class="modal-box"><button class="close" onclick="closeLogin()">×</button><div class="section-label">دخول مقيّد</div><h2>بوابة الأعضاء</h2><p>هذه واجهة تجريبية ويمكن ربطها لاحقاً بنظام حسابات أو Discord.</p><input placeholder="المعرّف الوظيفي"><input type="password" placeholder="رمز الدخول"><button class="dark-btn" onclick="fakeLogin()">دخول إلى السجل →</button></div></div>
-<div class="modal" id="caseModal"><div class="modal-box wide"><button class="close" onclick="closeCase()">×</button><div id="caseContent"></div></div></div>
-<div class="modal" id="witnessModal"><div class="modal-box wide"><button class="close" onclick="closeWitness()">×</button><div class="section-label">محضر إفادة</div><h2 id="witnessName"></h2><p id="witnessText" class="quote"></p></div></div>
-<div class="toast" id="toast"></div>
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

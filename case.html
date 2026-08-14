@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>ملف القضية | القضاء والعدل</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="case-page">
+<header>
+  <div class="header-logo"><img src="logo.png"><div><h1>القضاء والعدل</h1><p>ملف قضية سري</p></div></div>
+  <a class="login-btn" href="index.html">العودة للرئيسية</a>
+</header>
+<div id="caseContent"></div>
+</main>
+<script>
+const cases = {
+  "1": {
+    title:"قضية بجاد ستارك — القضية رقم 1",
+    status:"مغلقة",
+    intro:"يتم إلغاء ملف القضية المرفوعة على رئيس الجمهورية."
+  },
+  "2": {
+    title:"قضية العم جدو ورجال القانون — القضية رقم 2",
+    status:"مفتوحة",
+    intro:"ملف القضية يتضمن إفادات الأطراف والشهود حول واقعة التقييد والاعتداء وإطلاق النار.",
+    statements:[
+      ["العم جدو","كنا أنا واللمبي أمام محل الملابس. قلت لرجال القانون ابتعدوا عن هذا المكان، وقالوا إن المكان آمن ولا يجب علي قول ذلك. دفعني ودفعته وربطني ووضعني على الأرض، ثم فك قيدي عندما رأى رجالي يريدون التدخل. ثم أتى اليخاندرو وكبر الشجار وطلق النار على ذراعي، وطلبت منه عدم فعل ذلك، ثم ذهب بي اللمبي إلى المستشفى."],
+      ["اللمبي","كنت مع العم جدو في محل الملابس. خرج هو من اليمين وأنا من الشمال لأجلب حصاني. عندما وصلت رأيت العم جدو مربوطاً من رجال القانون، ففككت الحبل. رأيت رجل قانون يربط لوفي وكانت يايا معي. ثم سمعت إطلاق نار وركضت، ورأيت العم جدو مصاباً وأخذته إلى المستشفى، وكان جاك مصاباً أيضاً، والذي أطلق على العم جدو هو اليخاندرو."],
+      ["جاك هاربر","بعد استدعائي لحماية المحكمة ذهبنا إلى محل الملابس. وجدنا العم جدو يقول: لا تجلسوا هنا. قمت بربطه وقلت له لا تكلمني بهذا الكلام مرة أخرى، ثم فككت قيده. أتى ودفعني ثم ضرب اليخاندرو، فقمت بتربيطه وتربيط لوفي وذهبت به إلى السجن. ثم أتى شخص من الروتشيلد وأطلق النار علي وعلى اليخاندرو."],
+      ["الجنرال سيف","إذا كان هذا الاعتداء الذي فعله الطرف الآخر مثلما قال المارشال جاك المنذر، ربما سوف أقسو عليهم قليلاً، ولا أريد أن أبدأ عهدي بالقسوة، وسوف أوكل الأمر إليك."],
+      ["اللمبي — أمام المحكمة","قال لجاك هاربر: كلب الجنرال."],
+      ["يويو ال منذر","كان موجوداً العم جدو وهجم على جاك فقط، هذا ما رأيته، وكان معي والي الدار."]
+    ]
+  }
+};
+const params = new URLSearchParams(location.search);
+const id = params.get("id");
+const logged = localStorage.getItem("court_logged_in")==="true";
+const box=document.getElementById("caseContent");
+if(!logged){
+  box.innerHTML=`<section class="locked-page"><img src="logo.png"><h2>الوصول مقيّد</h2><p>يجب تسجيل الدخول لعرض تفاصيل القضية.</p><a class="gold-btn" href="index.html#login">تسجيل الدخول</a></section>`;
+} else if(!cases[id]){
+  box.innerHTML=`<section class="locked-page"><h2>القضية غير موجودة</h2><a class="gold-btn" href="index.html#cases">العودة للقضايا</a></section>`;
+} else {
+  const c=cases[id];
+  let html=`<section class="case-detail"><span class="badge ${c.status==="مفتوحة"?"open":"closed"}">${c.status}</span><h2>${c.title}</h2><p class="intro">${c.intro}</p>`;
+  if(c.statements) html += `<h3>إفادات الأطراف والشهود</h3><div class="statement-grid">` + c.statements.map(s=>`<article class="statement"><h3>${s[0]}</h3><p>${s[1]}</p></article>`).join("") + `</div>`;
+  html += `<div class="secret-note">هذا الملف مخصص لموظفي القضاء المصرح لهم.</div></section>`;
+  box.innerHTML=html;
+}
+</script>
+</body>
+</html>
